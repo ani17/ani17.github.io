@@ -1,5 +1,5 @@
 <script type="text/javascript">
-/*
+
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('worker.js').then(function(registration) {
@@ -11,12 +11,6 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
-*/
-
-var worker = new Worker('worker.js');
-   worker.onmessage = function (event) {
-     document.getElementById('result').textContent = event.data;
-   };
 </script>
 
 Hello World
